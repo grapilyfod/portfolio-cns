@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bài tập 4 - Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+  .bai4-page .assignment-card {
+    margin-top: 44px;
+    margin-bottom: 44px;
+  }
+
+  .bai4-page .assignment-card:first-of-type {
+    margin-top: 28px;
+  }
+
+  .bai4-page .assignment-card:last-of-type {
+    margin-bottom: 28px;
+  }
+  .bai4-page .appendix-card {
+    padding: 34px;
+  }
+
+  .bai4-page .image-gallery {
+    display: grid;
+    gap: 34px;
+    margin-top: 28px;
+  }
+
+  .bai4-page .image-gallery figure {
+    margin: 0;
+    padding: 18px;
+    border: 1px solid rgba(255, 199, 90, 0.25);
+    border-radius: 18px;
+    background: rgba(0, 0, 0, 0.24);
+  }
+
+  .bai4-page .image-gallery img {
+    display: block;
+    width: 100%;
+    max-height: 520px;
+    object-fit: contain;
+    border-radius: 14px;
+    background: rgba(0, 0, 0, 0.35);
+  }
+
+  .bai4-page .image-gallery figcaption {
+    margin-top: 14px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: center;
+  }
+</style>
+</head>
+
+<body>
+  <div class="noise"></div>
+  <div class="table-glow"></div>
+
+  <header class="navbar">
+    <a href="index.html#hero" class="logo">PORT<span>FOLIO</span></a>
+
+    <nav>
+      <a href="index.html#about">About me</a>
+      <a href="index.html#projects">Bài tập</a>
+      <a href="index.html#summary">Tổng kết</a>
+      <a href="index.html#contact">Liên hệ</a>
+    </nav>
+  </header>
+
+  <main class="detail-page bai4-page">
+    <section class="section panel glow-panel detail-content">
+
+      <div class="section-title">
+        <p>04</p>
+        <h2>Sử dụng công cụ hợp tác trực tuyến cho dự án nhóm</h2>
+      </div>
+
+      <h3>Báo cáo dự án nhóm 37</h3>
+
+      <p>
+        <strong>Thành viên nhóm:</strong> Nguyễn Gia Khiêm, Phạm Thanh Lam,
+        Nguyễn Phương Linh, Nguyễn Hoàng Long, Nguyễn Thế Hải Long.
+      </p>
+
+      <p>
+        <strong>Yêu cầu bài tập:</strong> Thực hành và đánh giá hiệu quả các công cụ
+        hợp tác trực tuyến trong quản lý dự án nhóm.
+      </p>
+
+      <p>
+        <strong>Dự án thực hiện:</strong> Xây dựng cẩm nang số hỗ trợ tìm kiếm nhà trọ
+        và lộ trình xe buýt cho tân sinh viên khu vực Cầu Giấy.
+      </p>
+
+      <div class="assignment-card">
+        <h3>Bảng phân công nhiệm vụ</h3>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>STT</th>
+                <th>Họ và tên</th>
+                <th>MSV</th>
+                <th>Phân công</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Nguyễn Gia Khiêm</td>
+                <td>25024124</td>
+                <td>Nhóm trưởng - Quản trị Trello, tổng hợp báo cáo và điều phối chung.</td>
+              </tr>
+
+              <tr>
+                <td>2</td>
+                <td>Phạm Thanh Lam</td>
+                <td>25024126</td>
+                <td>Khảo sát địa điểm nhà trọ thực tế, chụp ảnh và thu thập giá cả.</td>
+              </tr>
+
+              <tr>
+                <td>3</td>
+                <td>Nguyễn Phương Linh</td>
+                <td>25024128</td>
+                <td>Thu thập thông tin các tuyến xe buýt, điểm dừng và lộ trình tối ưu.</td>
+              </tr>
+
+              <tr>
+                <td>4</td>
+                <td>Nguyễn Hoàng Long</td>
+                <td>25024130</td>
+                <td>Soạn thảo nội dung cẩm nang trên Google Docs, thiết kế sơ đồ chỉ dẫn.</td>
+              </tr>
+
+              <tr>
+                <td>5</td>
+                <td>Nguyễn Thế Hải Long</td>
+                <td>25024132</td>
+                <td>Kiểm chứng thông tin liên hệ, đánh giá hiệu quả phối hợp của nhóm.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="assignment-card">
+        <h3>1. Giới thiệu</h3>
+
+        <h4>1.1 Bối cảnh và mục tiêu bài tập</h4>
+        <p>
+          Trong bối cảnh học tập và làm việc hiện đại, khả năng sử dụng thành thạo
+          các công cụ hợp tác trực tuyến là một kỹ năng thiết yếu. Bài tập yêu cầu nhóm
+          lựa chọn, thiết lập và sử dụng ít nhất 3 công cụ thuộc các danh mục khác nhau
+          như quản lý dự án, soạn thảo, lưu trữ và giao tiếp để thực hiện một dự án nhóm.
+        </p>
+
+        <p>
+          Mục tiêu là trải nghiệm thực tế quy trình quản lý dự án, theo dõi tiến độ,
+          cộng tác tài liệu và giao tiếp hiệu quả trên không gian số.
+        </p>
+
+        <h4>1.2 Dự án của nhóm</h4>
+        <p>
+          Nhóm 37 chọn thực hiện dự án “Xây dựng cẩm nang số hỗ trợ tìm kiếm nhà trọ
+          và lộ trình xe buýt cho tân sinh viên khu vực Cầu Giấy”. Đây là dự án có tính
+          thực tiễn cao, đòi hỏi sự phối hợp trong việc tổng hợp dữ liệu địa điểm,
+          khảo sát thực tế và trình bày nội dung trực quan.
+        </p>
+
+        <h4>1.3 Lựa chọn các công cụ hợp tác</h4>
+        <ul>
+          <li><strong>Trello:</strong> Quản lý dự án, trực quan hóa đầu việc và deadline.</li>
+          <li><strong>Google Drive:</strong> Lưu trữ chung, quản lý phiên bản và phân quyền.</li>
+          <li><strong>Google Sheets / Google Docs:</strong> Lập kế hoạch và soạn thảo nội dung theo thời gian thực.</li>
+          <li><strong>Zalo:</strong> Trao đổi nhanh, thảo luận và gửi thông báo.</li>
+        </ul>
+      </div>
+
+      <div class="assignment-card">
+        <h3>2. Quá trình triển khai và sử dụng công cụ</h3>
+
+        <h4>2.1 Giai đoạn 1: Lập kế hoạch và phân công</h4>
+        <p>
+          Trong buổi họp trực tuyến, nhóm trưởng nhắc lại mục tiêu của dự án là thống nhất
+          hướng làm cẩm nang số hỗ trợ tân sinh viên, chọn khu vực khảo sát nhà trọ,
+          xác định các tuyến xe buýt trọng điểm, phân công nhiệm vụ và chốt timeline.
+        </p>
+
+        <p>
+          Google Sheets được sử dụng để giúp các thành viên có cái nhìn tổng quan,
+          minh bạch về trách nhiệm và các mốc thời gian cần hoàn thành.
+        </p>
+
+        <h4>2.2 Giai đoạn 2: Thiết lập không gian làm việc</h4>
+        <p>
+          Nhóm thiết lập một thư mục chia sẻ chung trên Google Drive với tên
+          “Bài tập nhóm 37 - Dự án Cẩm nang số”. Đây là kho tài nguyên trung tâm của nhóm.
+        </p>
+
+        <ul>
+          <li><strong>Phân quyền:</strong> Tất cả thành viên được cấp quyền Editor.</li>
+          <li><strong>Tổ chức:</strong> Tài liệu quan trọng được lưu trữ theo từng nội dung.</li>
+          <li><strong>Lưu trữ đa phương tiện:</strong> Ảnh chụp nhà trọ và sơ đồ xe buýt được tải lên để kiểm chứng.</li>
+        </ul>
+
+        <h4>2.3 Giai đoạn 3: Triển khai và quản lý tiến độ</h4>
+        <p>
+          Các đầu việc được chia nhỏ thành các thẻ công việc trên Trello.
+          Trello đóng vai trò là công cụ quản lý tiến độ trực quan.
+        </p>
+
+        <ul>
+          <li>Các cột To Do, Doing, Done giúp theo dõi trạng thái công việc.</li>
+          <li>Khi hoàn thành, thành viên kéo thẻ sang cột hoàn thành.</li>
+          <li>Nhóm trưởng dễ dàng nắm tiến độ chung mà không cần hỏi từng người.</li>
+        </ul>
+
+        <h4>2.4 Giai đoạn 4: Giao tiếp và cộng tác</h4>
+        <p>
+          Zalo được sử dụng để thảo luận nhanh, gửi thông báo tức thời và trao đổi các vấn đề
+          phát sinh. Google Docs được dùng để các thành viên cùng chỉnh sửa nội dung cẩm nang,
+          góp ý trực tiếp bằng tính năng comment.
+        </p>
+      </div>
+
+      <div class="assignment-card">
+        <h3>3. Đánh giá hiệu quả và sự tích hợp</h3>
+
+        <h4>3.1 Đánh giá chi tiết từng công cụ</h4>
+        <p>
+          Nhóm nhận thấy mỗi công cụ đều phát huy vai trò trong việc kết nối các thành viên
+          từ xa. Đặc biệt, Google Docs giúp việc tổng hợp báo cáo diễn ra nhanh chóng.
+        </p>
+
+        <h4>3.2 Đánh giá sự tích hợp và hiệu quả tổng thể</h4>
+        <p>
+          Quy trình làm việc của nhóm diễn ra theo hướng liền mạch:
+          Google Sheets dùng để lên ý tưởng và kế hoạch, Trello dùng để quản lý đầu việc,
+          Google Drive dùng để lưu trữ dữ liệu, Zalo dùng để thảo luận nhanh và Google Docs
+          dùng để hoàn thiện sản phẩm.
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Công cụ</th>
+                <th>Ưu điểm</th>
+                <th>Nhược điểm và cách khắc phục</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Google Drive & G-Suite</td>
+                <td>
+                  Cộng tác thời gian thực, không cần gửi file qua lại.
+                  Có lịch sử chỉnh sửa, phân quyền chi tiết và tích hợp tốt với hệ sinh thái Google.
+                </td>
+                <td>
+                  Cần kết nối Internet ổn định. Google Sheets/Docs có thể không mạnh bằng Office offline.
+                  Nhóm khắc phục bằng cách thống nhất font chữ và bố cục từ đầu.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Trello</td>
+                <td>
+                  Trực quan, dễ sử dụng, thao tác kéo-thả đơn giản.
+                  Có deadline, gắn thành viên và app di động tiện lợi.
+                </td>
+                <td>
+                  Bản miễn phí có thể bị giới hạn với dự án phức tạp.
+                  Ngoài ra, thành viên dễ quên cập nhật nếu không tạo thói quen.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Zalo</td>
+                <td>
+                  Nhanh chóng, quen thuộc, dễ chia sẻ file, hình ảnh, link và luôn bật.
+                </td>
+                <td>
+                  Dễ bị xao lãng, tin nhắn quan trọng dễ bị trôi.
+                  Nhóm khắc phục bằng cách cập nhật quyết định cuối cùng lên Trello hoặc Google Docs.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Nhóm cũng dán link Google Drive trực tiếp vào thẻ Trello để các thành viên có thể
+          truy cập nhanh vào tài liệu cần làm. Thay vì dùng một công cụ cho tất cả, nhóm dùng
+          Trello để quản lý tiến độ, Drive để lưu trữ ảnh và dữ liệu, Zalo để giao tiếp nhanh.
+        </p>
+      </div>
+
+      <div class="assignment-card section-4-card">
+  <h3>4. Khó khăn gặp phải và giải pháp</h3>
+
+  <div class="problem-block">
+    <h4>4.1 Khó khăn 1: Xao lãng và trôi thông tin trên Zalo</h4>
+
+    <p>
+      <strong>Mô tả:</strong>
+      Zalo là nền tảng cá nhân nên dễ bị cuốn vào các cuộc trò chuyện ngoài lề.
+      Các thông tin quan trọng như link vị trí nhà trọ, số điện thoại chủ nhà
+      có thể bị trôi đi nhanh chóng.
+    </p>
+
+    <p>
+      <strong>Giải pháp:</strong>
+      Nhóm trưởng chủ động tổng kết các quyết định quan trọng sau mỗi buổi thảo luận
+      và cập nhật chúng lên Trello. Đồng thời, nhóm sử dụng tính năng reply để giữ
+      hội thoại đúng chủ đề.
+    </p>
+  </div>
+
+  <div class="problem-block">
+    <h4>4.2 Khó khăn 2: Quên cập nhật tiến độ trên Trello</h4>
+
+    <p>
+      <strong>Mô tả:</strong>
+      Trong ngày đầu, một số thành viên đã khảo sát xong nhưng quên di chuyển thẻ Trello,
+      khiến nhóm trưởng khó theo dõi tiến độ.
+    </p>
+
+    <p>
+      <strong>Giải pháp:</strong>
+      Nhóm trưởng thực hiện check-in nhanh 5 phút mỗi sáng trên Zalo,
+      tag tên thành viên và yêu cầu cập nhật trạng thái Trello.
+    </p>
+  </div>
+</div>
+
+      <div class="assignment-card">
+        <h3>5. Kết luận</h3>
+
+        <p>
+          Thông qua việc thực hiện dự án “Xây dựng cẩm nang số hỗ trợ tìm kiếm nhà trọ
+          và lộ trình xe buýt cho tân sinh viên khu vực Cầu Giấy”, Nhóm 37 đã áp dụng thành công
+          hệ sinh thái công cụ hợp tác trực tuyến bao gồm Google Drive, Google Sheets/Docs,
+          Trello và Zalo.
+        </p>
+
+        <ul>
+          <li>
+            <strong>Hiểu ưu, nhược điểm của từng công cụ:</strong>
+            Nhóm biết tận dụng Trello để quản lý tiến độ, Google Docs để soạn thảo thời gian thực
+            và Zalo để giao tiếp nhanh.
+          </li>
+
+          <li>
+            <strong>Xây dựng quy trình làm việc tích hợp:</strong>
+            Nhóm thiết lập được luồng công việc từ lên ý tưởng, phân công nhiệm vụ đến lưu trữ
+            và kiểm soát chất lượng sản phẩm.
+          </li>
+
+          <li>
+            <strong>Nâng cao kỹ năng làm việc số:</strong>
+            Các thành viên rèn luyện tư duy chủ động báo cáo tiến độ, thảo luận trực tuyến
+            và giải quyết xung đột thông tin.
+          </li>
+        </ul>
+
+        <p>
+          Kết quả chung cuộc là dự án được nộp đúng hạn với sự đóng góp của cả 5 thành viên.
+          Sản phẩm cuối cùng bao gồm bản cẩm nang chi tiết với hơn 10 địa chỉ nhà trọ đã xác thực
+          và sơ đồ lộ trình các tuyến xe buýt nội đô trọng điểm.
+        </p>
+      </div>
+
+      <div class="assignment-card appendix-card">
+  <h3>6. Phụ lục minh chứng</h3>
+
+  <p>
+    Phụ lục của báo cáo bao gồm các hình ảnh minh chứng cho quá trình sử dụng công cụ:
+  </p>
+
+  <div class="image-gallery">
+        <figure>
+          <img src="images/b4/hinh1.PNG" alt="Bảng kế hoạch và phân công nhiệm vụ trên Google Sheets">
+          <figcaption>Hình 1: Bảng kế hoạch và phân công nhiệm vụ trên Google Sheets.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/b4/hinh2.PNG" alt="Thiết lập không gian làm việc trên Google Drive">
+          <figcaption>Hình 2: Thiết lập không gian làm việc trên Google Drive.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/b4/hinh3.PNG" alt="Địa điểm nhà trọ thực tế">
+          <figcaption>Hình 3: Địa điểm nhà trọ thực tế, chụp ảnh và thu thập giá cả.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/b4/hinh4.PNG" alt="Bảng so sánh một số trọ khu vực Cầu Giấy">
+          <figcaption>Hình 4: Địa điểm nhà trọ thực tế, chụp ảnh và thu thập giá cả.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/b4/hinh5.PNG" alt="Thông tin các tuyến xe buýt">
+          <figcaption>Hình 5: Thông tin các tuyến xe buýt, điểm dừng và lộ trình tối ưu.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/b4/hinh6.PNG" alt="Cẩm nang số hỗ trợ tìm kiếm nhà trọ và lộ trình xe buýt">
+          <figcaption>Hình 6: Cẩm nang số hỗ trợ tìm kiếm nhà trọ và lộ trình xe buýt.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/b4/hinh7.PNG" alt="Kiểm chứng thông tin liên hệ">
+          <figcaption>Hình 7: Kiểm chứng thông tin liên hệ và đánh giá hiệu quả phối hợp.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/b4/hinh8.PNG" alt="Giao diện quản lý thẻ công việc trên Trello">
+          <figcaption>Hình 8: Giao diện quản lý thẻ công việc và tiến độ trên Trello.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/b4/hinh9.PNG" alt="Trao đổi và thảo luận trực tiếp trên Zalo">
+          <figcaption>Hình 9: Trao đổi và thảo luận trực tiếp trên Zalo.</figcaption>
+        </figure>
+      </div>
+</div>
+        <div class="principle-section">
+        <h3>File minh chứng</h3>
+
+        <p>
+          Dưới đây là file báo cáo minh chứng cho Bài tập 4 bằng PDF.
+        </p>
+
+        <div class="download-row">
+          <a class="download-link" href="filebaitap/b4.pdf" target="_blank">
+            Xem file PDF
+          </a>
+        </div>
+      </div>
+      <a class="back-link" href="index.html#projects">← Quay lại mục Bài tập</a>
+
+    </section>
+    
+  </main>
+
+  <footer>
+    <div class="footer-profile">
+    <h3>Hải Long - K70 - DS2</h3>
+  </div>
+  <p class="footer-subtitle">
+    Đại học Công Nghệ - Đại học Quốc Gia Hà Nội
+  </p>
+  <p class="footer-info">
+    made with love - 06/06/2026
+  </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

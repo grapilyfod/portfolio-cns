@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bài tập 3 - Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Chỉ áp dụng cho bài 3 */
+    .bai3-page .detail-content {
+      max-width: 1150px;
+      width: min(1150px, 92vw);
+    }
+
+    .bai3-page .assignment-card {
+      margin-top: 56px;
+      margin-bottom: 56px;
+      min-height: auto;
+    }
+
+    .bai3-page .prompt-group {
+      display: grid;
+      gap: 22px;
+      margin-top: 24px;
+    }
+
+    .bai3-page .prompt-box {
+      padding: 22px;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 199, 90, 0.25);
+      background: rgba(0, 0, 0, 0.22);
+    }
+
+    .bai3-page .prompt-box h4 {
+      margin-bottom: 12px;
+      color: var(--gold);
+      font-size: 19px;
+      line-height: 1.4;
+    }
+
+    .bai3-page .prompt-box p {
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 10px;
+    }
+
+    .bai3-page .prompt-text {
+      margin-top: 14px;
+      padding: 16px 18px;
+      border-left: 4px solid var(--gold);
+      border-radius: 12px;
+      background: rgba(255, 199, 90, 0.08);
+      color: var(--text);
+      line-height: 1.75;
+      font-family: "Space Mono", monospace;
+      font-size: 14.5px;
+      white-space: pre-wrap;
+    }
+
+    .bai3-page .compare-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin-top: 24px;
+    }
+
+    .bai3-page .compare-table {
+      width: 100%;
+      min-width: 900px;
+      border-collapse: collapse;
+      background: rgba(8, 8, 20, 0.65);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .bai3-page .compare-table th,
+    .bai3-page .compare-table td {
+      padding: 14px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.6;
+    }
+
+    .bai3-page .compare-table th {
+      color: var(--gold);
+      background: rgba(255, 199, 90, 0.12);
+    }
+
+    .bai3-page .compare-table td {
+      color: var(--muted);
+    }
+
+    .bai3-page .screenshot-placeholder {
+      margin-top: 18px;
+      padding: 40px 24px;
+      border: 2px dashed rgba(255, 199, 90, 0.35);
+      border-radius: 18px;
+      text-align: center;
+      color: var(--muted);
+      background: rgba(0, 0, 0, 0.18);
+    }
+
+    .bai3-page .tip-list li {
+      margin-bottom: 10px;
+    }
+    .bai3-page .source-image-card {
+  padding: 24px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 199, 90, 0.32);
+  background:
+    radial-gradient(circle at top right, rgba(255, 199, 90, 0.1), transparent 36%),
+    rgba(0, 0, 0, 0.24);
+}
+
+.bai3-page .source-image-card h4 {
+  margin-bottom: 12px;
+  color: var(--gold);
+  font-size: 21px;
+  line-height: 1.4;
+}
+
+.bai3-page .source-image-card p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.bai3-page .source-image-box {
+  margin-top: 20px;
+  padding: 18px;
+  border-radius: 18px;
+  border: 2px dashed rgba(255, 199, 90, 0.35);
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.bai3-page .source-image-box img {
+  display: block;
+  width: 100%;
+  max-height: 560px;
+  object-fit: contain;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.bai3-page .source-image-box figcaption {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: center;
+}
+  </style>
+</head>
+
+<body>
+  <div class="noise"></div>
+  <div class="table-glow"></div>
+
+  <header class="navbar">
+    <a href="index.html#hero" class="logo">PORT<span>FOLIO</span></a>
+
+    <nav>
+      <a href="index.html#about">About me</a>
+      <a href="index.html#projects">Bài tập</a>
+      <a href="index.html#summary">Tổng kết</a>
+      <a href="index.html#contact">Liên hệ</a>
+    </nav>
+  </header>
+
+  <main class="detail-page bai3-page">
+    <section class="section panel glow-panel detail-content">
+      
+      <div class="section-title">
+        <p>03</p>
+        <h2>Bài tập 3</h2>
+      </div>
+            <!-- 1. PHÂN TÍCH -->
+      <div class="assignment-card">
+        <h3>1. Phân tích tác vụ học tập</h3>
+
+        <p>
+          Ba tác vụ học tập được lựa chọn là những tình huống phổ biến khi sinh viên sử dụng
+          công cụ AI trong quá trình học tập. Mỗi tác vụ có mục tiêu, yêu cầu đầu ra và mức độ
+          phức tạp khác nhau, vì vậy cách viết prompt cũng cần được điều chỉnh phù hợp.
+        </p>
+
+        <div class="compare-table-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Tác vụ</th>
+                <th>Mục tiêu</th>
+                <th>Thách thức</th>
+                <th>Yêu cầu đối với prompt</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Tóm tắt tài liệu học thuật</td>
+                <td>Rút gọn nội dung dài thành các ý chính dễ hiểu.</td>
+                <td>Dễ bỏ sót ý quan trọng hoặc tóm tắt quá chung chung.</td>
+                <td>Cần nêu rõ độ dài, đối tượng đọc, cấu trúc và mức độ chi tiết.</td>
+              </tr>
+
+              <tr>
+                <td>Giải thích khái niệm phức tạp</td>
+                <td>Biến một khái niệm khó thành phần giải thích dễ tiếp cận.</td>
+                <td>Nếu prompt mơ hồ, AI có thể giải thích quá hàn lâm hoặc quá ngắn.</td>
+                <td>Cần yêu cầu ví dụ, so sánh, trình tự giải thích và kiểm tra hiểu biết.</td>
+              </tr>
+
+              <tr>
+                <td>Tạo câu hỏi ôn tập</td>
+                <td>Tạo bộ câu hỏi giúp người học tự kiểm tra kiến thức.</td>
+                <td>Câu hỏi có thể bị lệch trọng tâm, quá dễ hoặc thiếu đáp án.</td>
+                <td>Cần quy định số lượng câu hỏi, dạng câu hỏi, mức độ khó và đáp án kèm giải thích.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <h3>Thử nghiệm và đánh giá hiệu quả của Prompt Engineering</h3>
+
+      <p>
+        Bài tập này tập trung vào việc phát triển kỹ năng viết prompt hiệu quả để tận dụng
+        tốt hơn khả năng của mô hình ngôn ngữ lớn trong học tập. Nội dung chính của bài là
+        xây dựng nhiều phiên bản prompt cho cùng một tác vụ, sau đó thử nghiệm, so sánh
+        và rút ra nguyên tắc viết prompt hiệu quả.
+      </p>
+      <div class="source-image-card">
+  <h4>Ảnh/tài liệu đầu vào dùng để hỏi AI cho tác vụ 1</h4>
+
+  <p>
+    Ảnh được sử dụng làm dữ liệu đầu vào để thử nghiệm các phiên bản prompt.
+  </p>
+
+  <figure class="source-image-box">
+    <img src="images/b3/im.PNG" alt="Ảnh đầu vào dùng để hỏi AI bằng prompt">
+    <figcaption>Ảnh đầu vào dùng để thử nghiệm prompt với công cụ AI.</figcaption>
+  </figure>
+</div>
+
+      <!-- 2. THỬ NGHIỆM -->
+      <div class="assignment-card">
+        <h3>2. Thử nghiệm các phiên bản prompt</h3>
+
+        <p>
+          Với mỗi tác vụ, nhóm xây dựng ba phiên bản prompt: prompt cơ bản, prompt cải tiến
+          và prompt nâng cao. Ba phiên bản này được dùng để thử nghiệm trên công cụ AI,
+          sau đó so sánh chất lượng đầu ra.
+        </p>
+
+        <!-- Tác vụ 1 -->
+        <div class="prompt-group">
+          <div class="prompt-box">
+            <h4>Tác vụ 1: Tóm tắt một bài đọc hoặc tài liệu học thuật</h4>
+
+            <p><strong>Prompt cơ bản:</strong></p>
+            <div class="prompt-text">Hãy tóm tắt tài liệu sau.</div>
+            <figure class="source-image-box">
+    <img src="images/b3/1.PNG" alt="Ảnh đầu vào dùng để hỏi AI bằng prompt">
+    <figcaption>Prompt cơ bản</figcaption>
+  </figure>
+            <p><strong>Prompt cải tiến:</strong></p>
+            <div class="prompt-text">Hãy tóm tắt tài liệu sau trong khoảng 200-250 từ. 
+Bản tóm tắt cần nêu rõ:
+1. Chủ đề chính của tài liệu
+2. Các luận điểm quan trọng
+3. Kết luận hoặc thông điệp chính
+
+Viết bằng ngôn ngữ dễ hiểu cho sinh viên năm nhất.</div>
+              <figure class="source-image-box">
+    <img src="images/b3/2.PNG" alt="Ảnh đầu vào dùng để hỏi AI bằng prompt">
+    <figcaption>Prompt cải tiến</figcaption>
+  </figure>
+            <p><strong>Prompt nâng cao:</strong></p>
+            <div class="prompt-text">Bạn là một trợ giảng đại học đang hỗ trợ sinh viên đọc tài liệu học thuật.
+
+Nhiệm vụ: Tóm tắt tài liệu sau theo cấu trúc rõ ràng.
+
+Yêu cầu:
+- Bắt đầu bằng 1 câu nêu chủ đề chính.
+- Liệt kê 3-5 ý quan trọng nhất dưới dạng bullet points.
+- Giải thích ngắn vì sao mỗi ý quan trọng.
+- Kết thúc bằng phần “Điều cần nhớ” gồm 2 câu.
+- Tránh sao chép nguyên văn quá nhiều từ tài liệu.
+- Ngôn ngữ phù hợp với sinh viên mới học chủ đề này.
+</div>
+<figure class="source-image-box">
+    <img src="images/b3/3.PNG" alt="Ảnh đầu vào dùng để hỏi AI bằng prompt">
+    <figcaption>Prompt nâng cao</figcaption>
+  </figure>
+          </div>
+
+          <!-- Tác vụ 2 -->
+          <div class="prompt-box">
+            <h4>Tác vụ 2: Giải thích một khái niệm phức tạp</h4>
+
+            <p><strong>Prompt cơ bản:</strong></p>
+            <div class="prompt-text">Hãy giải thích khái niệm machine learning.</div>
+            <figure class="source-image-box">
+    <img src="images/b3/4.PNG" alt="Ảnh đầu vào dùng để hỏi AI bằng prompt">
+    <figcaption>Prompt cơ bản</figcaption>
+  </figure>
+            <p><strong>Prompt cải tiến:</strong></p>
+            <div class="prompt-text">Hãy giải thích khái niệm machine learning cho người mới bắt đầu.
+Câu trả lời cần có:
+1. Định nghĩa ngắn gọn
+2. Ví dụ thực tế
+3. Sự khác nhau giữa machine learning và lập trình truyền thống
+4. Một đoạn tổng kết dễ nhớ</div>
+<figure class="source-image-box">
+    <img src="images/b3/5.PNG" alt="Ảnh đầu vào dùng để hỏi AI bằng prompt">
+    <figcaption>Prompt cải tiến</figcaption>
+  </figure>
+            <p><strong>Prompt nâng cao:</strong></p>
+            <div class="prompt-text">Bạn là một giảng viên công nghệ thông tin đang giải thích cho sinh viên năm nhất.
+
+Hãy giải thích khái niệm machine learning theo cách dễ hiểu nhất.
+
+Cấu trúc câu trả lời:
+1. Giải thích bằng một ví dụ đời thường trước.
+2. Sau đó đưa ra định nghĩa chính xác hơn.
+3. So sánh machine learning với lập trình truyền thống bằng bảng.
+4. Nêu 2 ứng dụng thực tế.
+5. Đưa ra một ví dụ nhỏ: AI học phân loại email spam như thế nào.
+6. Kết thúc bằng 3 câu hỏi kiểm tra nhanh để người học tự đánh giá.
+
+Không dùng quá nhiều thuật ngữ khó. Nếu có thuật ngữ, hãy giải thích ngay sau đó.</div>
+<figure class="source-image-box">
+    <img src="images/b3/6.PNG" alt="Ảnh đầu vào dùng để hỏi AI bằng prompt">
+    <figcaption>Prompt nâng cao</figcaption>
+  </figure>
+<figure class="source-image-box">
+    <img src="images/b3/7.PNG" alt="Ảnh đầu vào dùng để hỏi AI bằng prompt">
+    <figcaption>Prompt nâng cao</figcaption>
+  </figure>
+          </div>
+
+          <!-- Tác vụ 3 -->
+          <div class="prompt-box">
+            <h4>Tác vụ 3: Tạo bộ câu hỏi ôn tập cho một chủ đề</h4>
+
+            <p><strong>Prompt cơ bản:</strong></p>
+            <div class="prompt-text">Hãy tạo câu hỏi ôn tập về chủ đề định lý Green.</div>
+            <figure class="source-image-box">
+    <img src="images/b3/8.PNG" alt="Ảnh đầu vào dùng để hỏi AI bằng prompt">
+    <figcaption>Prompt cơ bản</figcaption>
+  </figure>
+            <p><strong>Prompt cải tiến:</strong></p>
+            <div class="prompt-text">Hãy tạo 7 câu hỏi ôn tập về định lý Green.
+Yêu cầu:
+- 3 câu hỏi lý thuyết
+- 3 câu hỏi bài tập tính toán
+- 1 câu hỏi vận dụng
+- Có đáp án ngắn cho từng câu</div>
+<figure class="source-image-box">
+    <img src="images/b3/9.PNG" alt="Ảnh đầu vào dùng để hỏi AI bằng prompt">
+    <figcaption>Prompt cải tiến</figcaption>
+  </figure>
+  <figure class="source-image-box">
+    <img src="images/b3/10.PNG" alt="Ảnh đầu vào dùng để hỏi AI bằng prompt">
+    <figcaption>Prompt cải tiến</figcaption>
+  </figure>
+            <p><strong>Prompt nâng cao:</strong></p>
+            <div class="prompt-text">Bạn là giảng viên Giải tích nhiều biến đang chuẩn bị tài liệu ôn tập cho sinh viên.
+
+Hãy tạo bộ câu hỏi ôn tập về định lý Green theo 3 mức độ: dễ, trung bình, khó.
+
+Yêu cầu:
+- Tổng cộng 8 câu hỏi.
+- Chia thành 3 phần:
+  A. Nhận biết khái niệm
+  B. Áp dụng công thức
+  C. Vận dụng vào bài toán thực tế hoặc bài toán biến đổi đường cong
+- Mỗi câu cần có đáp án.
+- Với câu tính toán, hãy nêu các bước giải chính.
+- Sau cùng, hãy thêm phần “Lỗi thường gặp” gồm 3 lỗi sinh viên hay mắc khi dùng định lý Green.</div>
+  <figure class="source-image-box">
+    <img src="images/b3/11.PNG" alt="Ảnh đầu vào dùng để hỏi AI bằng prompt">
+    <figcaption>Prompt nâng cao</figcaption>
+  </figure>
+  <figure class="source-image-box">
+    <img src="images/b3/12.PNG" alt="Ảnh đầu vào dùng để hỏi AI bằng prompt">
+    <figcaption>Prompt nâng cao</figcaption>
+  </figure>
+    <figure class="source-image-box">
+    <img src="images/b3/13.PNG" alt="Ảnh đầu vào dùng để hỏi AI bằng prompt">
+    <figcaption>Prompt nâng cao</figcaption>
+  </figure>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. BẢNG SO SÁNH -->
+      <div class="assignment-card">
+        <h3>3. So sánh kết quả thử nghiệm</h3>
+
+        <p>
+          Sau khi thử nghiệm, kết quả cho thấy prompt càng rõ ràng thì câu trả lời càng có cấu trúc,
+          đúng trọng tâm và dễ sử dụng hơn. Prompt cơ bản thường cho kết quả ngắn và chung chung.
+          Prompt cải tiến giúp AI hiểu rõ yêu cầu hơn. Prompt nâng cao cho kết quả tốt nhất vì có
+          vai trò, ngữ cảnh, cấu trúc đầu ra và tiêu chí đánh giá cụ thể.
+        </p>
+
+        <div class="compare-table-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Loại prompt</th>
+                <th>Đặc điểm</th>
+                <th>Ưu điểm</th>
+                <th>Hạn chế</th>
+                <th>Chất lượng kết quả</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Cơ bản</td>
+                <td>Ngắn, chỉ nêu yêu cầu chính.</td>
+                <td>Nhanh, dễ viết, phù hợp với yêu cầu đơn giản.</td>
+                <td>Đầu ra dễ chung chung, thiếu cấu trúc, thiếu chiều sâu.</td>
+                <td>Trung bình</td>
+              </tr>
+
+              <tr>
+                <td>Cải tiến</td>
+                <td>Có thêm độ dài, cấu trúc, đối tượng đọc hoặc yêu cầu cụ thể.</td>
+                <td>Kết quả rõ ràng hơn, dễ theo dõi hơn.</td>
+                <td>Vẫn có thể thiếu ví dụ hoặc phân tích sâu nếu chưa yêu cầu.</td>
+                <td>Tốt</td>
+              </tr>
+
+              <tr>
+                <td>Nâng cao</td>
+                <td>Có role prompting, ngữ cảnh, tiêu chí, cấu trúc và yêu cầu đầu ra chi tiết.</td>
+                <td>Kết quả đầy đủ, đúng mục tiêu, có khả năng dùng trực tiếp cho học tập.</td>
+                <td>Tốn thời gian viết prompt hơn.</td>
+                <td>Rất tốt</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <!-- 4. ĐÁNH GIÁ -->
+      <div class="assignment-card">
+        <h3>4. Đánh giá hiệu quả prompt</h3>
+
+        <p>
+          Qua thử nghiệm, có thể thấy prompt nâng cao thường hiệu quả hơn vì nó không chỉ đưa ra
+          yêu cầu, mà còn định hướng cách AI suy nghĩ và trình bày câu trả lời. Khi prompt có vai trò
+          cụ thể, AI sẽ điều chỉnh giọng văn và mức độ giải thích phù hợp hơn với người học.
+        </p>
+
+        <p>
+          Prompt cải tiến cũng cho kết quả tốt hơn prompt cơ bản vì nó cung cấp thêm tiêu chí về
+          độ dài, cấu trúc và nội dung cần có. Điều này giúp câu trả lời ít bị lan man và dễ đánh giá hơn.
+          Ngược lại, prompt cơ bản tuy nhanh nhưng thường khiến AI phải tự đoán mong muốn của người dùng,
+          dẫn đến kết quả không ổn định.
+        </p>
+
+        <p>
+          Nhìn chung, hiệu quả của prompt phụ thuộc vào mức độ rõ ràng của mục tiêu, bối cảnh,
+          đối tượng người đọc và định dạng đầu ra. Một prompt tốt không nhất thiết phải dài,
+          nhưng cần đủ thông tin để AI hiểu chính xác nhiệm vụ.
+        </p>
+      </div>
+
+      <!-- 5. NGUYÊN TẮC -->
+      <div class="assignment-card">
+        <h3>5. Nguyên tắc và mẹo viết prompt hiệu quả</h3>
+
+        <ul class="tip-list">
+          <li><strong>Nêu rõ vai trò của AI:</strong> Ví dụ “Bạn là giảng viên”, “Bạn là trợ giảng”, “Bạn là chuyên gia”.</li>
+          <li><strong>Cung cấp bối cảnh:</strong> Cho biết người đọc là ai, đang học ở trình độ nào và cần kết quả để làm gì.</li>
+          <li><strong>Chỉ định cấu trúc đầu ra:</strong> Yêu cầu bảng, bullet points, các bước, phần tổng kết hoặc ví dụ.</li>
+          <li><strong>Đưa tiêu chí đánh giá:</strong> Ví dụ cần dễ hiểu, ngắn gọn, có ví dụ, có đáp án, tránh thuật ngữ khó.</li>
+          <li><strong>Chia nhỏ nhiệm vụ:</strong> Với tác vụ phức tạp, nên chia thành nhiều phần thay vì hỏi một câu quá chung.</li>
+          <li><strong>Yêu cầu ví dụ minh họa:</strong> Ví dụ giúp kết quả dễ hiểu và có tính ứng dụng hơn.</li>
+          <li><strong>Kiểm soát độ dài:</strong> Nên nói rõ muốn câu trả lời ngắn, trung bình hay chi tiết.</li>
+        </ul>
+      </div>
+
+      <!-- 6. KẾT LUẬN -->
+      <div class="assignment-card">
+        <h3>6. Kết luận</h3>
+
+        <p>
+          Bài thử nghiệm cho thấy việc viết prompt có ảnh hưởng trực tiếp đến chất lượng câu trả lời
+          của mô hình AI. Prompt càng rõ ràng, có cấu trúc và có bối cảnh thì kết quả càng chính xác,
+          dễ hiểu và phù hợp với mục tiêu học tập.
+        </p>
+
+        <p>
+          Ba mức prompt cơ bản, cải tiến và nâng cao thể hiện sự khác biệt rõ rệt. Prompt cơ bản
+          phù hợp khi cần câu trả lời nhanh. Prompt cải tiến phù hợp cho học tập thường ngày.
+          Prompt nâng cao phù hợp khi cần kết quả có chất lượng cao, có thể dùng cho báo cáo,
+          ôn tập hoặc nghiên cứu.
+        </p>
+      </div>
+      <div class="principle-section">
+        <h3>File minh chứng</h3>
+
+        <p>
+          Dưới đây là file báo cáo minh chứng cho Bài tập 3 bằng PDF.
+        </p>
+
+        <div class="download-row">
+          <a class="download-link" href="filebaitap/b3.pdf" target="_blank">
+            Xem file PDF
+          </a>
+        </div>
+      </div>
+      <a class="back-link" href="index.html#projects">← Quay lại mục Bài tập</a>
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-profile">
+    <h3>Hải Long - K70 - DS2</h3>
+  </div>
+  <p class="footer-subtitle">
+    Đại học Công Nghệ - Đại học Quốc Gia Hà Nội
+  </p>
+  <p class="footer-info">
+    made with love - 06/06/2026
+  </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

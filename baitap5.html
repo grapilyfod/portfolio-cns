@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bài tập 5 - Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Chỉ áp dụng cho bài 5 */
+    .bai5-page .detail-content {
+      max-width: 1150px;
+      width: min(1150px, 92vw);
+    }
+
+    .bai5-page .assignment-card {
+      margin-top: 56px;
+      margin-bottom: 56px;
+      min-height: auto;
+    }
+
+    .bai5-page .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .bai5-page .process-box {
+      padding: 22px;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 199, 90, 0.25);
+      background: rgba(0, 0, 0, 0.22);
+    }
+
+    .bai5-page .process-box h4 {
+      margin-bottom: 12px;
+      color: var(--gold);
+      font-size: 19px;
+      line-height: 1.4;
+    }
+
+    .bai5-page .process-box p,
+    .bai5-page .process-box li {
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 15.5px;
+    }
+
+    .bai5-page .prompt-text {
+      margin-top: 14px;
+      padding: 16px 18px;
+      border-left: 4px solid var(--gold);
+      border-radius: 12px;
+      background: rgba(255, 199, 90, 0.08);
+      color: var(--text);
+      line-height: 1.75;
+      font-family: "Space Mono", monospace;
+      font-size: 14.5px;
+      white-space: pre-wrap;
+    }
+
+    .bai5-page .compare-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin-top: 24px;
+    }
+
+    .bai5-page .compare-table {
+      width: 100%;
+      min-width: 900px;
+      border-collapse: collapse;
+      background: rgba(8, 8, 20, 0.65);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .bai5-page .compare-table th,
+    .bai5-page .compare-table td {
+      padding: 14px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.6;
+    }
+
+    .bai5-page .compare-table th {
+      color: var(--gold);
+      background: rgba(255, 199, 90, 0.12);
+    }
+
+    .bai5-page .compare-table td {
+      color: var(--muted);
+    }
+
+    .bai5-page .image-gallery {
+      display: grid;
+      gap: 34px;
+      margin-top: 28px;
+    }
+
+    .bai5-page .image-gallery figure {
+      margin: 0;
+      padding: 18px;
+      border: 1px solid rgba(255, 199, 90, 0.25);
+      border-radius: 18px;
+      background: rgba(0, 0, 0, 0.24);
+    }
+
+    .bai5-page .image-gallery img {
+      display: block;
+      width: 100%;
+      max-height: 560px;
+      object-fit: contain;
+      border-radius: 14px;
+      background: rgba(0, 0, 0, 0.35);
+    }
+
+    .bai5-page .image-gallery figcaption {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .bai5-page .blank-space {
+      height: 260px;
+      margin-top: 18px;
+    }
+
+    @media (max-width: 900px) {
+      .bai5-page .process-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="noise"></div>
+  <div class="table-glow"></div>
+
+  <header class="navbar">
+    <a href="index.html#hero" class="logo">PORT<span>FOLIO</span></a>
+
+    <nav>
+      <a href="index.html#about">About me</a>
+      <a href="index.html#projects">Bài tập</a>
+      <a href="index.html#summary">Tổng kết</a>
+      <a href="index.html#contact">Liên hệ</a>
+    </nav>
+  </header>
+
+  <main class="detail-page bai5-page">
+    <section class="section panel glow-panel detail-content">
+
+      <div class="section-title">
+        <p>05</p>
+        <h2>Bài tập 5</h2>
+      </div>
+
+      <h3>Sử dụng AI tạo sinh trong sáng tạo nội dung số</h3>
+
+      <p>
+        Bài tập này tập trung vào việc sử dụng các công cụ AI tạo sinh để hỗ trợ quá trình
+        sáng tạo nội dung số. Dự án được lựa chọn là xây dựng một sản phẩm truyền thông/
+        học tập có sự kết hợp giữa văn bản, hình ảnh và thiết kế trực quan.
+      </p>
+
+      <!-- I. TỔNG QUAN -->
+      <div class="assignment-card">
+        <h3>I. Tổng quan dự án</h3>
+
+        <p>
+          <strong>Dự án sáng tạo nội dung được chọn:</strong>
+          Thiết kế một infographic/bài thuyết trình ngắn giới thiệu về chủ đề
+          “Ứng dụng AI tạo sinh trong học tập của sinh viên”.
+        </p>
+
+        <p>
+          Mục tiêu của sản phẩm là trình bày một cách trực quan vai trò của AI tạo sinh
+          trong học tập, bao gồm các lợi ích, hạn chế và những lưu ý đạo đức khi sử dụng.
+          Sản phẩm cuối cùng được xây dựng bằng cách kết hợp đầu ra của nhiều công cụ AI
+          với sự chỉnh sửa, chọn lọc và sáng tạo cá nhân.
+        </p>
+
+        <ul>
+          <li>
+            <strong>Công cụ AI tạo văn bản:</strong>
+            ChatGPT được dùng để lên ý tưởng, viết dàn ý, đề xuất nội dung chính và chỉnh sửa câu chữ.
+          </li>
+
+          <li>
+            <strong>Công cụ AI tạo hình ảnh:</strong>
+            DALL-E hoặc một công cụ tạo ảnh tương tự được dùng để tạo hình minh họa cho chủ đề.
+          </li>
+
+          <li>
+            <strong>Công cụ AI hỗ trợ thiết kế:</strong>
+            Canva AI được dùng để gợi ý bố cục, phối hợp hình ảnh và hoàn thiện sản phẩm cuối cùng.
+          </li>
+        </ul>
+
+        <p>
+          Trong dự án này, AI không thay thế hoàn toàn người làm bài mà đóng vai trò như một
+          trợ lý sáng tạo. Người thực hiện vẫn cần lựa chọn ý tưởng phù hợp, kiểm tra nội dung,
+          chỉnh sửa bố cục và đảm bảo sản phẩm cuối cùng có tính cá nhân.
+        </p>
+      </div>
+
+      <!-- II. QUY TRÌNH -->
+      <div class="assignment-card">
+        <h3>II. Quy trình sử dụng AI</h3>
+
+        <p>
+          Quy trình thực hiện được chia thành ba giai đoạn chính: tạo nội dung văn bản,
+          tạo hình ảnh minh họa và hoàn thiện thiết kế. Ở mỗi giai đoạn, nhóm sử dụng
+          một công cụ AI phù hợp với chức năng của công cụ đó.
+        </p>
+
+        <div class="process-grid">
+          <div class="process-box">
+            <h4>1. Tạo ý tưởng và nội dung bằng ChatGPT</h4>
+
+            <p>
+              ChatGPT được sử dụng để đề xuất ý tưởng, lập dàn ý cho infographic/bài thuyết trình
+              và viết nội dung ngắn gọn cho từng phần.
+            </p>
+
+            <p><strong>Prompt đã sử dụng:</strong></p>
+
+            <div class="prompt-text">Hãy đề xuất nội dung cho một infographic về chủ đề “Ứng dụng AI tạo sinh trong học tập của sinh viên”.
+
+Yêu cầu:
+- Có tiêu đề chính
+- Có 4-5 ý lớn
+- Mỗi ý có mô tả ngắn gọn
+- Ngôn ngữ dễ hiểu, phù hợp với sinh viên năm nhất
+- Có thêm phần lưu ý khi sử dụng AI một cách có trách nhiệm</div>
+
+            <p>
+              <strong>Kết quả nhận được:</strong>
+              AI đưa ra cấu trúc nội dung gồm phần giới thiệu, lợi ích, ví dụ ứng dụng,
+              hạn chế và lưu ý đạo đức. Tuy nhiên, một số câu còn chung chung nên cần chỉnh sửa lại.
+            </p>
+
+            <p>
+              <strong>Cách chỉnh sửa:</strong>
+              Người thực hiện rút gọn nội dung, thay các câu dài bằng các cụm ngắn phù hợp
+              với infographic, đồng thời thêm ví dụ gần với việc học như tóm tắt tài liệu,
+              tạo câu hỏi ôn tập và giải thích khái niệm khó.
+            </p>
+          </div>
+
+          <div class="process-box">
+            <h4>2. Tạo hình ảnh minh họa bằng AI tạo ảnh (Gemini)</h4>
+
+            <p>
+              Công cụ tạo ảnh được dùng để tạo hình minh họa về sinh viên sử dụng AI trong học tập,
+              giúp sản phẩm trực quan và sinh động hơn.
+            </p>
+
+            <p><strong>Prompt đã sử dụng:</strong></p>
+
+            <div class="prompt-text">Create a clean digital illustration of a university student using generative AI for studying.
+
+Style:
+- Modern educational infographic style
+- Bright but professional colors
+- Student sitting with a laptop
+- Floating icons representing text generation, image generation, study notes and quiz questions
+- No text in the image
+- Suitable for a presentation slide</div>
+
+            <p>
+              <strong>Kết quả nhận được:</strong>
+              AI tạo ra hình ảnh có bố cục đẹp và phù hợp với chủ đề. Tuy nhiên, một số chi tiết
+              nhỏ có thể chưa chính xác hoặc chưa đồng bộ với phong cách tổng thể của sản phẩm.
+            </p>
+
+            <p>
+              <strong>Cách chỉnh sửa:</strong>
+              Chọn hình có bố cục rõ nhất, loại bỏ các ảnh bị lỗi chi tiết, sau đó cắt lại kích thước
+              để phù hợp với slide hoặc infographic.
+            </p>
+          </div>
+
+          <div class="process-box">
+            <h4>3. Thiết kế sản phẩm bằng Canva AI</h4>
+
+            <p>
+              Canva AI được sử dụng để hỗ trợ bố cục, chọn mẫu thiết kế và sắp xếp các thành phần
+              như tiêu đề, nội dung, biểu tượng và hình minh họa.
+            </p>
+
+            <p><strong>Prompt đã sử dụng:</strong></p>
+
+            <div class="prompt-text">Tạo một thiết kế infographic về chủ đề “Ứng dụng AI tạo sinh trong học tập của sinh viên”.
+
+Yêu cầu:
+- Bố cục rõ ràng, hiện đại
+- Có 5 phần nội dung chính
+- Có không gian cho hình minh họa
+- Phù hợp để trình bày trong báo cáo học tập
+- Màu sắc chuyên nghiệp, dễ đọc</div>
+
+            <p>
+              <strong>Kết quả nhận được:</strong>
+              Canva AI gợi ý nhiều bố cục khác nhau. Một số mẫu có màu sắc đẹp nhưng nội dung quá nhiều,
+              cần chỉnh sửa để tránh rối mắt.
+            </p>
+
+            <p>
+              <strong>Cách chỉnh sửa:</strong>
+              Người thực hiện chọn một mẫu đơn giản, sắp xếp lại thứ tự nội dung,
+              giảm lượng chữ trên mỗi phần và điều chỉnh màu sắc để sản phẩm dễ đọc hơn.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- III. PHÂN TÍCH -->
+      <div class="assignment-card">
+        <h3>III. Phân tích và so sánh công cụ</h3>
+
+        <p>
+          Mỗi công cụ AI có vai trò riêng trong quá trình sáng tạo. ChatGPT phù hợp với việc
+          tạo ý tưởng và xử lý ngôn ngữ; công cụ tạo ảnh phù hợp với việc tạo yếu tố thị giác;
+          còn Canva AI hỗ trợ mạnh trong phần bố cục và hoàn thiện sản phẩm.
+        </p>
+
+        <div class="compare-table-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Công cụ</th>
+                <th>Vai trò</th>
+                <th>Điểm mạnh</th>
+                <th>Hạn chế</th>
+                <th>Cách xử lý của người thực hiện</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>ChatGPT</td>
+                <td>Tạo ý tưởng, dàn ý, nội dung mô tả</td>
+                <td>
+                  Nhanh, dễ chỉnh sửa, có thể tạo nhiều phiên bản nội dung khác nhau.
+                </td>
+                <td>
+                  Một số câu trả lời còn chung chung, cần kiểm tra lại độ chính xác và sự phù hợp.
+                </td>
+                <td>
+                  Chọn lọc ý chính, viết lại bằng ngôn ngữ cá nhân và rút gọn cho phù hợp với thiết kế.
+                </td>
+              </tr>
+
+              <tr>
+                <td>AI tạo hình ảnh</td>
+                <td>Tạo hình minh họa cho chủ đề</td>
+                <td>
+                  Tạo ảnh nhanh, nhiều phong cách, giúp sản phẩm trực quan hơn.
+                </td>
+                <td>
+                  Có thể tạo ra chi tiết sai, hình ảnh chưa đúng hoàn toàn với yêu cầu.
+                </td>
+                <td>
+                  Lọc ảnh phù hợp, không dùng ảnh lỗi, chỉnh kích thước và vị trí khi đưa vào sản phẩm.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Canva AI</td>
+                <td>Hỗ trợ bố cục và thiết kế cuối cùng</td>
+                <td>
+                  Dễ sử dụng, có nhiều mẫu đẹp, hỗ trợ sắp xếp nội dung nhanh.
+                </td>
+                <td>
+                  Một số mẫu có bố cục rối hoặc dùng quá nhiều yếu tố trang trí.
+                </td>
+                <td>
+                  Chọn bố cục đơn giản, chỉnh lại màu sắc, giảm chữ và sắp xếp lại nội dung.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Qua so sánh, có thể thấy AI tạo sinh hiệu quả nhất khi được sử dụng theo từng vai trò cụ thể.
+          Nếu chỉ dùng một công cụ duy nhất, sản phẩm dễ bị thiếu cân bằng: có thể có nội dung tốt
+          nhưng hình ảnh yếu, hoặc có thiết kế đẹp nhưng nội dung chưa sâu. Việc kết hợp nhiều công cụ
+          giúp quy trình sáng tạo linh hoạt hơn.
+        </p>
+
+        <p>
+          Tuy nhiên, kết quả AI tạo ra không nên được sử dụng nguyên bản. Người thực hiện cần kiểm tra,
+          chỉnh sửa và đưa vào dấu ấn cá nhân. Trong sản phẩm cuối cùng, phần AI hỗ trợ chủ yếu là
+          tạo gợi ý ban đầu, còn phần quyết định nội dung, lựa chọn bố cục và hoàn thiện sản phẩm
+          vẫn do người thực hiện đảm nhiệm.
+        </p>
+      </div>
+
+      <!-- IV. VAI TRÒ -->
+      <div class="assignment-card">
+        <h3>IV. Vai trò của AI trong quá trình sáng tạo</h3>
+
+        <h4>1. Những phần AI làm tốt</h4>
+        <p>
+          AI làm tốt ở giai đoạn khởi tạo ý tưởng. Thay vì bắt đầu từ một trang trống,
+          người thực hiện có thể yêu cầu AI đề xuất nhiều hướng triển khai khác nhau.
+          AI cũng hỗ trợ tốt trong việc rút gọn văn bản, đề xuất tiêu đề, tạo nội dung
+          theo cấu trúc và gợi ý cách trình bày.
+        </p>
+
+        <p>
+          Với hình ảnh và thiết kế, AI giúp tiết kiệm thời gian tìm kiếm tài nguyên.
+          Các công cụ tạo ảnh có thể tạo ra hình minh họa phù hợp với chủ đề,
+          còn Canva AI giúp người dùng nhanh chóng có bố cục ban đầu để tiếp tục chỉnh sửa.
+        </p>
+
+        <h4>2. Những phần AI còn hạn chế</h4>
+        <p>
+          AI vẫn có hạn chế về độ chính xác, tính nhất quán và khả năng hiểu hoàn toàn ý đồ sáng tạo
+          của người dùng. Nội dung do AI viết có thể đúng về mặt tổng quát nhưng thiếu ví dụ cụ thể.
+          Hình ảnh do AI tạo có thể đẹp nhưng đôi khi có lỗi chi tiết hoặc không phù hợp hoàn toàn
+          với yêu cầu ban đầu.
+        </p>
+
+        <h4>3. AI thay đổi quy trình sáng tạo như thế nào?</h4>
+        <p>
+          Trước đây, quá trình sáng tạo thường bắt đầu bằng việc tự tìm ý tưởng, tìm hình ảnh,
+          viết nội dung và thiết kế thủ công. Khi có AI, quy trình này trở nên nhanh hơn:
+          người thực hiện có thể tạo nhiều phương án trong thời gian ngắn, sau đó chọn lọc
+          và chỉnh sửa.
+        </p>
+
+        <p>
+          Tuy nhiên, điều này cũng làm thay đổi vai trò của người học. Người học không chỉ là người
+          “nhận kết quả” từ AI, mà phải trở thành người định hướng, đánh giá và biên tập.
+          Chất lượng sản phẩm phụ thuộc nhiều vào khả năng đặt prompt, khả năng nhận xét kết quả
+          và khả năng chỉnh sửa đầu ra.
+        </p>
+
+        <h4>4. Vấn đề đạo đức cần cân nhắc</h4>
+        <p>
+          Khi sử dụng AI trong sáng tạo nội dung, cần minh bạch về việc có sử dụng công cụ AI.
+          Người thực hiện không nên trình bày toàn bộ sản phẩm như thể hoàn toàn do mình tạo ra
+          nếu phần lớn nội dung đến từ AI. Ngoài ra, cần kiểm tra bản quyền hình ảnh, tránh sử dụng
+          nội dung gây hiểu lầm và không sao chép nguyên văn đầu ra của AI mà không có chỉnh sửa.
+        </p>
+
+        <p>
+          Một vấn đề khác là sự phụ thuộc quá mức vào AI. Nếu chỉ dùng AI để tạo toàn bộ sản phẩm,
+          người học có thể giảm khả năng tự tư duy và sáng tạo. Vì vậy, AI nên được dùng như công cụ
+          hỗ trợ, không phải công cụ thay thế hoàn toàn quá trình học tập và sáng tạo.
+        </p>
+      </div>
+
+      <!-- V. MINH CHỨNG -->
+      <div class="assignment-card">
+        <h3>V. Quá trình thực hiện</h3>
+
+        <div class="image-gallery">
+
+          <figure>
+            <img src="images/b5/1.png" alt="Kết quả nội dung từ ChatGPT">
+            <figcaption>Hình 1: Kết quả nội dung được AI tạo ra và được chỉnh sửa lại.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="images/b5/2.png" alt="Prompt tạo hình ảnh bằng AI">
+            <figcaption>Hình 2: Sử dụng Gemini tạo hình ảnh minh họa cho sản phẩm.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="images/b5/3.png" alt="Thiết kế sản phẩm bằng Canva AI">
+            <figcaption>Hình 3: Sử dụng Canva AI để hỗ trợ bố cục và thiết kế.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="images/b5/4.png" alt="Sản phẩm cuối cùng">
+            <figcaption>Hình 4: Sản phẩm cuối cùng sau khi kết hợp đầu ra của AI và chỉnh sửa cá nhân.</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="principle-section">
+        <h3>File minh chứng</h3>
+
+        <p>
+          File báo cáo minh chứng cho Bài tập 5.
+        </p>
+
+        <div class="download-row">
+          <a class="download-link" href="filebaitap/b5.pdf" target="_blank">
+            Xem file PDF
+          </a>
+        </div>
+      </div>
+      <a class="back-link" href="index.html#projects">← Quay lại mục Bài tập</a>
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-profile">
+    <h3>Hải Long - K70 - DS2</h3>
+  </div>
+  <p class="footer-subtitle">
+    Đại học Công Nghệ - Đại học Quốc Gia Hà Nội
+  </p>
+  <p class="footer-info">
+    made with love - 06/06/2026
+  </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

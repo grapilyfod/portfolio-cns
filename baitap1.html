@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Bài tập 1 - Thao tác tệp và thư mục</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="noise"></div>
+  <div class="table-glow"></div>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">PORT<span>FOLIO</span></a>
+
+    <nav>
+      <a href="index.html#about">About me</a>
+      <a href="index.html#projects">Bài tập</a>
+      <a href="index.html#summary">Tổng kết</a>
+      <a href="index.html#contact">Liên hệ</a>
+    </nav>
+  </header>
+
+  <main class="assignment-page">
+    <section class="section panel reveal glow-panel assignment-detail">
+      <div class="section-title">
+        <p>01</p>
+        <h2>Thao tác cơ bản với tệp tin và thư mục</h2>
+      </div>
+
+      <p class="assignment-intro">
+        Bài tập này rèn luyện kỹ năng thao tác với tệp tin và thư mục trên hệ điều hành Windows,
+        bao gồm tạo thư mục, tạo tệp văn bản, đổi tên, sao chép, di chuyển, xóa tệp, xóa vĩnh viễn
+        và khôi phục tệp từ Thùng rác.
+      </p>
+
+      <div class="assignment-grid">
+        <article class="assignment-card">
+          <h3>01. Mở File Explorer</h3>
+          <p>
+            Sử dụng tổ hợp phím <strong>Windows + E</strong> hoặc nhấp vào biểu tượng thư mục
+            trên thanh tác vụ để mở File Explorer.
+          </p>
+          <figure class="step-image">
+            <img src="images/b1/buoc1.png" alt="Minh chứng mở File Explorer">
+            <figcaption>Bước 1: Mở File Explorer.</figcaption>
+          </figure>
+        </article>
+
+        <article class="assignment-card">
+          <h3>02. Truy cập ổ đĩa</h3>
+          <p>
+            Trong File Explorer, chọn <strong>This PC</strong>, sau đó truy cập vào ổ đĩa D:, E:
+            hoặc thư mục Documents nếu máy chỉ có ổ C:.
+          </p>
+          <figure class="step-image">
+            <img src="images/b1/buoc2.png" alt="Minh chứng mở File Explorer">
+            <figcaption>Bước 2: Truy cập ổ đĩa hoặc thư mục Documents.</figcaption>
+          </figure>
+        </article>
+
+        <article class="assignment-card">
+          <h3>03. Tạo thư mục thực hành</h3>
+          <p>
+            Nhấp chuột phải vào khoảng trống, chọn <strong>New → Folder</strong>, sau đó đặt tên
+            thư mục là <strong>ThucHanh_NguyenTheHaiLong</strong>.
+          </p>
+          <figure class="step-image">
+            <img src="images/b1/buoc3.png" alt="Minh chứng mở File Explorer">
+            <figcaption>Bước 3: Tạo thư mục thực hành.</figcaption>
+          </figure>
+        </article>
+
+        <article class="assignment-card">
+          <h3>04. Tạo tệp văn bản</h3>
+          <p>
+            Mở thư mục vừa tạo, nhấp chuột phải vào khoảng trống, chọn
+            <strong>New → Text Document</strong> và đặt tên tệp là <strong>GhiChu.txt</strong>.
+          </p>
+          <figure class="step-image">
+            <img src="images/b1/buoc4.png" alt="Minh chứng mở File Explorer">
+            <figcaption>Bước 4: Mở thư mục thực hành vừa tạo.</figcaption>
+          </figure>
+        </article>
+
+        <article class="assignment-card">
+          <h3>05. Đổi tên tệp tin</h3>
+          <p>
+            Nhấp chuột phải vào tệp <strong>GhiChu.txt</strong>, chọn <strong>Rename</strong>,
+            sau đó đổi tên thành <strong>GhiChuQuanTrong.txt</strong>.
+          </p>
+          <figure class="step-image">
+            <img src="images/b1/buoc5.png" alt="Minh chứng mở File Explorer">
+            <figcaption>Bước 5: Tạo tệp văn bản GhiChu.txt.</figcaption>
+          </figure>
+        </article>
+
+        <article class="assignment-card">
+          <h3>06. Tạo thư mục con</h3>
+          <p>
+            Trong thư mục thực hành, tạo thêm một thư mục con tên là <strong>TaiLieu</strong>
+            để chứa các tệp được sao chép hoặc di chuyển.
+          </p>
+          <figure class="step-image">
+            <img src="images/b1/buoc6.png" alt="Minh chứng mở File Explorer">
+            <figcaption>Bước 6: Đổi tên tệp thành GhiChuQuanTrong.txt.</figcaption>
+          </figure>
+        </article>
+
+        <article class="assignment-card">
+          <h3>07. Sao chép tệp tin</h3>
+          <p>
+            Chọn tệp <strong>GhiChuQuanTrong.txt</strong>, nhấn <strong>Ctrl + C</strong>,
+            mở thư mục <strong>TaiLieu</strong>, sau đó nhấn <strong>Ctrl + V</strong>.
+            Thao tác này tạo ra một bản sao của tệp.
+          </p>
+          <figure class="step-image">
+            <img src="images/b1/buoc7.png" alt="Minh chứng mở File Explorer">
+            <figcaption>Bước 7: Tạo thư mục con TaiLieu.</figcaption>
+          </figure>
+        </article>
+
+        <article class="assignment-card">
+          <h3>08. Di chuyển tệp tin</h3>
+          <p>
+            Tạo tệp mới tên <strong>DiChuyen.txt</strong>, chọn tệp và nhấn
+            <strong>Ctrl + X</strong>, sau đó vào thư mục <strong>TaiLieu</strong> và nhấn
+            <strong>Ctrl + V</strong>. Tệp sẽ biến mất khỏi vị trí cũ và xuất hiện ở vị trí mới.
+          </p>
+          <figure class="step-image">
+            <img src="images/b1/buoc8.png" alt="Minh chứng mở File Explorer">
+            <figcaption>Bước 8: Sao chép tệp GhiChuQuanTrong.txt vào thư mục TaiLieu.</figcaption>
+          </figure>
+        </article>
+
+        <article class="assignment-card">
+          <h3>09. Xóa tệp tin</h3>
+          <p>
+            Trong thư mục <strong>TaiLieu</strong>, nhấp chuột phải vào
+            <strong>GhiChuQuanTrong.txt</strong> và chọn <strong>Delete</strong>.
+            Tệp sẽ được chuyển vào <strong>Recycle Bin</strong>.
+          </p>
+          <figure class="step-image">
+            <img src="images/b1/buoc9.png" alt="Minh chứng mở File Explorer">
+            <figcaption>Bước 9: Di chuyển tệp DiChuyen.txt vào thư mục TaiLieu.</figcaption>
+          </figure>
+        </article>
+
+        <article class="assignment-card">
+          <h3>10. Xóa vĩnh viễn</h3>
+          <p>
+            Chọn tệp <strong>DiChuyen.txt</strong>, giữ phím <strong>Shift</strong> và nhấn
+            <strong>Delete</strong>. Nếu xác nhận, tệp sẽ bị xóa vĩnh viễn và không đi qua Thùng rác.
+          </p>
+          <figure class="step-image">
+            <img src="images/b1/buoc10.png" alt="Minh chứng mở File Explorer">
+            <figcaption>Bước 10: Xóa tệp GhiChuQuanTrong.txt vào Recycle Bin.</figcaption>
+          </figure>
+        </article>
+
+        <article class="assignment-card">
+          <h3>11. Khôi phục từ Thùng rác</h3>
+          <p>
+            Mở <strong>Recycle Bin</strong>, tìm tệp <strong>GhiChuQuanTrong.txt</strong>,
+            nhấp chuột phải và chọn <strong>Restore</strong> để khôi phục tệp về vị trí ban đầu.
+          </p>
+          <figure class="step-image">
+            <img src="images/b1/buoc11.png" alt="Minh chứng mở File Explorer">
+            <figcaption>Bước 11: Xóa vĩnh viễn tệp DiChuyen.txt.</figcaption>
+          </figure>
+        </article>
+
+        <article class="assignment-card">
+          <h3>12. Kết quả đạt được</h3>
+          <p>
+            Sau khi hoàn thành bài tập, em đã thực hành được các thao tác cơ bản với tệp và thư mục,
+            phân biệt được sao chép và di chuyển, biết xóa tệp vào Thùng rác, xóa vĩnh viễn và khôi phục tệp.
+          </p>
+          <figure class="step-image">
+            <img src="images/b1/buoc12.png" alt="Minh chứng mở File Explorer">
+            <figcaption>Bước 12: Khôi phục tệp GhiChuQuanTrong.txt từ Recycle Bin.</figcaption>
+          </figure>
+        </article>
+      </div>
+
+      <div class="principle-section">
+        <h3>File minh chứng</h3>
+
+        <p>
+          Dưới đây là file báo cáo minh chứng cho Bài tập 1 bằng PDF.
+        </p>
+
+        <div class="download-row">
+          <a class="download-link" href="filebaitap/b1.pdf" target="_blank">
+            Xem file PDF
+          </a>
+        </div>
+      </div>
+
+      <a class="back-link" href="index.html#projects">← Quay lại danh sách bài tập</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-profile">
+    <h3>Hải Long - K70 - DS2</h3>
+  </div>
+  <p class="footer-subtitle">
+    Đại học Công Nghệ - Đại học Quốc Gia Hà Nội
+  </p>
+  <p class="footer-info">
+    made with love - 06/06/2026
+  </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
